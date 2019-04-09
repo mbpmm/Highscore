@@ -1,3 +1,4 @@
 ﻿  main.cpp
-main.obj : error LNK2019: símbolo externo "void __cdecl ShowScores(int * const,int)" (?ShowScores@@YAXQAHH@Z) sin resolver al que se hace referencia en la función _main
-C:\Users\Administrador\source\repos\HighscoreLib\Debug\Test.exe : fatal error LNK1120: 1 externos sin resolver
+c:\users\administrador\desktop\highscore\highscorelib\test\main.cpp(17): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+c:\users\administrador\desktop\highscore\highscorelib\test\main.cpp(19): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  Test.vcxproj -> C:\Users\Administrador\Desktop\Highscore\HighscoreLib\Debug\Test.exe
