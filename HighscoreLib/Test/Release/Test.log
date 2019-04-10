@@ -1,9 +1,5 @@
-﻿  main.cpp
-c:\users\marian\desktop\highscore\highscorelib\test\main.cpp(15): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
-HighscoreLib.lib(hsLib.obj) : error LNK2038: se detectaron diferencias para '_ITERATOR_DEBUG_LEVEL': el valor '2' no coincide con el valor '0' en main.obj
-HighscoreLib.lib(hsLib.obj) : error LNK2038: se detectaron diferencias para 'RuntimeLibrary': el valor 'MDd_DynamicDebug' no coincide con el valor 'MD_DynamicRelease' en main.obj
-HighscoreLib.lib(hsLib.obj) : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificación '/OPT:ICF'
-LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-HighscoreLib.lib(hsLib.obj) : error LNK2001: símbolo externo __imp___invalid_parameter sin resolver
-HighscoreLib.lib(hsLib.obj) : error LNK2001: símbolo externo __imp___CrtDbgReportW sin resolver
-C:\Users\marian\Desktop\Highscore\HighscoreLib\Release\Test.exe : fatal error LNK1120: 2 externos sin resolver
+﻿HighscoreLib.lib(hsLib.obj) : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificación '/OPT:ICF'
+  Generando código
+  All 71 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  Test.vcxproj -> C:\Users\marian\Desktop\Highscore\HighscoreLib\Release\Test.exe
