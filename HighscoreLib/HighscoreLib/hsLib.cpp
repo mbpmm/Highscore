@@ -1,24 +1,38 @@
 #include <iostream>
 #include "hsLib.h"
-using namespace std;
 
-void AddScore(Scores score, Scores scores[])
+void InitiateScores(Highscores& scores)
 {
-	
+	for (int i = 0; i < TOP; i++)
+	{
+		scores.highscores[i].nombre = "ABC";
+		scores.highscores[i].score = 0;
+	}
 }
 
-void Sort(Scores scores[], const int largo)
+void AddScore(Highscores& score, int points, std::string name, int position)
 {
-	int aux;
-	for (int i = 0; i < largo ; i++)
+	score.highscores[position].score = points;
+	score.highscores[position].nombre = name;
+}
+
+void Sort(Highscores& scores)
+{
+	int auxScore;
+	std::string auxName;
+
+	for (int i = 0; i < TOP ; i++)
 	{
-		for (int j = 0; j < largo-1; j++)
+		for (int j = 0; j < TOP-1; j++)
 		{
-			if (scores[j].score<scores[j+1].score)
+			if (scores.highscores[j].score<scores.highscores[j+1].score)
 			{
-				aux = scores[j].score;
-				scores[j].score = scores[j + 1].score;
-				scores[j + 1].score = aux;
+				auxScore = scores.highscores[j].score;
+				scores.highscores[j].score = scores.highscores[j + 1].score;
+				scores.highscores[j + 1].score = auxScore;
+				auxName = scores.highscores[j].nombre;
+				scores.highscores[j].nombre = scores.highscores[j + 1].nombre;
+				scores.highscores[j + 1].nombre = auxName;
 			}
 		}
 	}

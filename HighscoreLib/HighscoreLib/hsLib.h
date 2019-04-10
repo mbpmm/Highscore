@@ -1,11 +1,17 @@
 #pragma once
-#include <string.h>
+#include <string>
+#define TOP 10
 
 struct Scores
 {
 	int score;
 	std::string nombre;
 };
-void AddScore(Scores score, int scores[]);
-void Sort(Scores scores[], const int largo);
+struct Highscores
+{
+	Scores highscores[TOP];
+};
+void InitiateScores(Highscores& scores);
+void AddScore(Highscores& score, int points, std::string name, int position);
+void Sort(Highscores& scores);
 

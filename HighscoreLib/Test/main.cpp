@@ -1,32 +1,41 @@
 #include <iostream>
 #include "../HighscoreLib/hsLib.h"
-#include <ctime>
-#include <string.h>
-#include <sstream>
+#include <string>
 using namespace std;
 
-void ShowScores(Scores scores[], const int largo)
+void ShowScores(Highscores scores)
 {
-	for (int i = 0; i < largo; i++)
+	for (int i = 0; i < TOP; i++)
 	{
-		cout << i + 1 << "-" << scores[i].nombre.c_str() << " - " << scores[i].score << endl;
+		cout << scores.highscores[i].nombre.c_str() << " - " << scores.highscores[i].score << endl;
 	}
 }
 
 void main()
 {
-	ostringstream ej;
-	srand(time(0));
-	const int largo = 10;
-	int aux = 0;
-	Scores scores[largo];
-	for (int i = 0; i < largo; i++)
-	{
-		scores[i].score = rand()%100;
-		scores[i].nombre = "Ruben";
-	}
-	Sort(scores,largo);
-	ShowScores(scores, largo);
+	Highscores highscoreExample; //You can store 10 values max, you can modify this value by changing the TOP number and recompiling the library file 
+
+	
+	//-.-.-.-.-.-.-.-.-.-.-InitiateScores EXAMPLE-.-.-.-.-.-.-.-.-.-.-
+
+	InitiateScores(highscoreExample);
+	
+	ShowScores(highscoreExample);
+	
+	/*
+	//-.-.-.-.-.-.-.-.-.-.-AddScore and Sort EXAMPLE-.-.-.-.-.-.-.-.-.-.-
+
+	int pos = 4;
+	string name = "Pancracio";
+	int points = 230;
+
+	InitiateScores(highscoreExample);
+	AddScore(highscoreExample, points, name, pos);
+	AddScore(highscoreExample, 340, "Ruben", 0);
+	// AddScore(highscoreExample, 12, "Zoe", 4); // WARNING!!!! if the position is a value that you already use you will delete the previous value stored.
+	Sort(highscoreExample); //Arranges the values added from from highest to lowest
+	ShowScores(highscoreExample);
+	*/
 
 	cin.get();
 }

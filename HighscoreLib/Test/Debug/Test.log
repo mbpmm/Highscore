@@ -1,4 +1,3 @@
 ﻿  main.cpp
-c:\users\administrador\desktop\highscore\highscorelib\test\main.cpp(17): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
-c:\users\administrador\desktop\highscore\highscorelib\test\main.cpp(19): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
-  Test.vcxproj -> C:\Users\Administrador\Desktop\Highscore\HighscoreLib\Debug\Test.exe
+c:\users\marian\desktop\highscore\highscorelib\test\main.cpp(15): warning C4326: el tipo de valor devuelto de 'main' debe ser 'int' en lugar de 'void'
+  Test.vcxproj -> C:\Users\marian\Desktop\Highscore\HighscoreLib\Debug\Test.exe
